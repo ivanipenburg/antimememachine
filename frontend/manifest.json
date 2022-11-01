@@ -1,0 +1,36 @@
+{
+
+    "manifest_version": 2,
+    "name": "Anti Meme Machine",
+    "version": "0.1",
+  
+    "description": "Filters out meme templates from Reddit",
+  
+    "icons": {
+      "48": "icons/icon-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.reddit.com/*", "file:///C:/Users/ivani/Documents/anti-meme-machine/antimememachine/index.html"],
+        "js": ["antimememachine.js"]
+      }
+    ],
+
+    "web_accessible_resources": [
+      "images/IsThisAPigeon_0.jpg",
+      "onnx_model.onnx"
+    ],
+
+    "permissions": [
+      "storage",
+      "activeTab", 
+      "declarativeContent",
+      "webRequest", 
+      "webRequestBlocking", 
+      "webNavigation",
+      "<all_urls>"
+    ]
+
+  }
+  
